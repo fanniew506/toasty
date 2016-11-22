@@ -26,13 +26,36 @@ const collection = $t(HTMLElement);
 
 // If argument is a function, will push function into a queue to be executed on `document` `ready`
 $t(func);
+```
 
+#### AJAX
 
+```javascript
 // Merges two or more JavaScript objects
 $t.extend(objA, objB, objC);
 
 // Receives an options object argument and sends an AJAX request with native JavaScript using an XHR, or XMLHttpRequest object
 $t.ajax(options);
+```
+* Options that are accepted as an object include the following:
+ * `success` and `error` callback functions
+ * `url`
+ * `method`
+ * `data`
+ * `contentType`
+
+* Example:
+```javascript
+$t.ajax({
+  method: "GET",
+  url:  "http://api.openweathermap.org/data/2.5/weather",
+  data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
+  success(data) {
+    const node = document.createElement("p");
+    $t(node).append(data);
+    $t('li').append(node);
+  }
+})
 ```
 
 #### `ToastyNodeCollection.prototype` Methods
@@ -66,19 +89,17 @@ this.$t.append($h3);
 #### `removeClass`
 * Takes a single class as an argument and removes it from the HTML elements in the node collection
 ```javascript
-$t('li').removeClass('snake-head');
-$t('li').removeClass('snake');
-$t('li').removeClass('apple');
+$t('li').removeClass('sample-child');
 ```
 
 #### `children`
-* Returns a toasty node collection of all children of all nodes in the array
+* Returns a `ToastyNodeCollection` of all children of all nodes in the collection
 
 #### `parent`
-* Returns a node collection of the `parent`s of each of the nodes
+* Returns a `ToastyNodeCollection` collection of the `parent`s of each of the nodes
 
 #### `find`
-* Accepts a selector as an argument and returns a matching node collection
+* Accepts a selector as an argument and returns a matching `ToastyNodeCollection`
 
 #### `remove`
 * Removes the html of all the nodes in the collection from the DOM
