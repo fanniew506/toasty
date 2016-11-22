@@ -97,7 +97,7 @@ $t.ajax({
 ##### `get`
 * Takes in an index and fetches the HTML element at that index from the node collection
 
-##### Event handling
+#### Event handling
 
 ##### `on`
 * Accepts an event and a callback and adds the event handler to every element in the node array
