@@ -79,7 +79,7 @@ $t.ajax({
 ##### `removeClass`
 * Takes a single class as an argument and removes it from the HTML elements in the `ToastyNodeCollection`
 
-#### `toggleClass`
+##### `toggleClass`
 * Takes a class name as a string as an argument and toggles the class for each element in the `ToastyNodeCollection`
 
 #### Traversal
