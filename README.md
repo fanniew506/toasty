@@ -17,19 +17,21 @@ const $t = require('./../toasty/lib/main');
 const $li = $t('<li>');
 ```
 
-// $t('tag') and $t('.class') will collect all matching nodes from the page and return a ToastyNodeCollection object
-const collection = $t('li');
-const collection = $t('.class-name');
+* `$t('tag')` and `$t('.class')` will collect all matching nodes from the page and return a ToastyNodeCollection object
+```javascript
+const tagCollection = $t('li');
+const classCollection = $t('.class-name');
+```
 
-// If argument is an instance of HTMLElement, function returns native HTMLElement wrapped in toasty, returning a ToastyNodeCollection
-const collection = $t(HTMLElement);
+* `$t(HTMLElement)`
+  * If argument is an instance of HTMLElement, function returns native HTMLElement wrapped in toasty, returning a ToastyNodeCollection
 
-// If argument is a function, will push function into a queue to be executed on `document` `ready`
-$t(func);
+* `$t(func)`
+  * If argument is a function, will push function into a queue to be executed on `document` `ready`
 
 #### AJAX
 
-#### $t.ajax(options);
+#### `$t.ajax(options);`
 * Uses native Javascript API to send ajax requests using an XMLHttpRequest object
 * Receives an options object as an argument and includes the following:
  * `success` and `error` callback functions
