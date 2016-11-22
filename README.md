@@ -29,7 +29,7 @@ const classCollection = $t('.class-name');
 * `$t(func)`
   * If argument is a function, will push function into a queue to be executed on `document` `ready`
 
-#### AJAX
+#### AJAX Requests
 
 #### `$t.ajax(options);`
 * Uses native Javascript API to send ajax requests using an XMLHttpRequest object
@@ -91,14 +91,19 @@ $t.ajax({
 ##### `remove`
 * Removes the html of all the nodes in the collection from the DOM
 
-##### `on`
-* Accepts an event and a callback and adds the event handler from every element in the node array
-
-##### `off`
-* Accepts an event and a callback and removes the event handler from every element in the node array
-
 ##### `text`
 * Accepts a string and adds it to the HTML element text content
 
 ##### `get`
 * Takes in an index and fetches the HTML element at that index from the node collection
+
+##### Event handling
+
+##### `on`
+* Accepts an event and a callback and adds the event handler to every element in the node array
+```javascript
+$("ul").on("click", () => {...})
+```
+
+##### `off`
+* Accepts an event and a callback and removes the event handler from every element in the node array
