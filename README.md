@@ -1,13 +1,29 @@
 # Toasty
 
-A light-weight library to manage core DOM manipulation and traversal functionality, AJAX requests, and event handling. Implemented using the native DOM API.
+A light-weight library to manage core DOM manipulation and traversal functionality, AJAX requests, and event handling. Implemented using native DOM API.
 
 ## How To Use
 
-Download `./toasty/lib/` and include it in project directory. Wherever toasty is used, include the following line at the top of the file:
+Download `./toasty/lib/` and include it in project directory.
+
+Wherever toasty is used, include the following line at the top of the file:
 ```javascript
 const $t = require('./../toasty/lib/main');
 ```
+
+To include a script source for Toasty in an html file, first ensure webpack is installed in the project:
+`npm install webpack --save-dev`
+
+Or, install globally:
+`npm install webpack -g`
+
+Next, run `webpack`
+
+Then include the following script tag into your html file:
+```html
+<script type="text/javascript" src="./lib/toasty.js" charset="utf-8"></script>
+```
+You are ready to start using Toasty!
 
 ### Methods
 
