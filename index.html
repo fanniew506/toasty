@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>jQuery Lite</title>
+  <script type="text/javascript" src="./toasty.js" charset="utf-8"></script>
+  <style media="screen">
+    .my-div {
+      padding: 20px;
+      text-align: center;
+    }
+    .party {
+      background-color: rebeccapurple;
+    }
+  </style>
+
+</head>
+<body>
+  <script>
+    $t(() => {
+      $t('.my-div.cool').on('click', () => alert('clicked'));
+      $t('.remove-me').remove();
+      setInterval(() => {
+        $t('.my-div.cool').toggleClass('party')
+      }, 500)
+      $t.ajax({
+        method: "GET",
+        url:  "http://api.openweathermap.org/data/2.5/weather",
+        data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
+        success(data) {
+          const node = document.createElement("p");
+          $t(node).append(data);
+          $t('li').append(node);
+        }
+      })
+    });
+  </script>
+
+  <div class="my-div cool">
+    <h1>Hello!</h1>
+    <p class="remove-me">Remove me!</p>
+  </div>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+</body>
+</html>
