@@ -78,19 +78,10 @@ $t.ajax({
 
 #### `addClass`
 * Takes a class as an argument and adds it to HTML elements in the node collection
-* Can accept multiple classes like so:
-```javascript
-const $h3 = $t('<h3>');
-$h3.addClass('notice start');
-$h3.text('Hit Space to Start');
-this.$t.append($h3);
-```
+* Can accept multiple classes
 
 #### `removeClass`
 * Takes a single class as an argument and removes it from the HTML elements in the node collection
-```javascript
-$t('li').removeClass('sample-child');
-```
 
 #### `children`
 * Returns a `ToastyNodeCollection` of all children of all nodes in the collection
