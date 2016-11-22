@@ -30,14 +30,13 @@ $t(func);
 
 #### AJAX
 
-```javascript
 // Merges two or more JavaScript objects
 $t.extend(objA, objB, objC);
 
-// Receives an options object argument and sends an AJAX request with native JavaScript using an XHR, or XMLHttpRequest object
-$t.ajax(options);
-```
-* Options that are accepted as an object include the following:
+JavaScript using an XHR, or XMLHttpRequest object
+##### $t.ajax(options);
+* Uses native Javascript API to send ajax requests
+* Receives an options object as an argument and includes the following:
  * `success` and `error` callback functions
  * `url`
  * `method`
