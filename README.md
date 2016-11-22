@@ -1,6 +1,6 @@
 # Toasty
 
-A light-weight library to manage core DOM manipulation functionality, making AJAX requests, and event handling. Implemented using the native DOM API to ensure cross-browser compatibility.
+A light-weight library to manage core DOM manipulation functionality, AJAX requests, and event handling. Implemented using the native DOM API to ensure cross-browser compatibility.
 
 ## How To Use
 
@@ -33,7 +33,7 @@ const classCollection = $t('.class-name');
 
 #### `$t.ajax(options);`
 * Uses native Javascript API to send ajax requests using an XMLHttpRequest object
-* Receives an options object as an argument and includes the following:
+* Receives an options object as an argument and can include the following:
  * `success` and `error` callback functions
  * `url`
  * `method`
@@ -56,49 +56,49 @@ $t.ajax({
 
 #### `ToastyNodeCollection.prototype` Methods
 
-#### `html`
+##### `html`
 * `html` receives an optional string as an argument
 * With argument: the string will be the `innerHTML` of each node
 * Without argument: returns `innerHTML` of the first node
 
-#### `empty`
+##### `empty`
 * Clears all nodes in the internal array
 
-#### `append`
+##### `append`
 * Accepts a toasty wrapped collection, an HTML element, or a string
 * Appends the `outerHTML` of each element in the argument to the `innerHTML` of each element in the `ToastyNodeCollection`
 
-#### `attr`
+##### `attr`
 * Getter method for values of an attribute for the first element from array of matched elements
 * Acts as a setter method if a second argument of value is passed in
 
-#### `addClass`
+##### `addClass`
 * Takes a class as an argument and adds it to HTML elements in the node collection
 * Can accept multiple classes
 
-#### `removeClass`
+##### `removeClass`
 * Takes a single class as an argument and removes it from the HTML elements in the node collection
 
-#### `children`
+##### `children`
 * Returns a `ToastyNodeCollection` of all children of all nodes in the collection
 
-#### `parent`
+##### `parent`
 * Returns a `ToastyNodeCollection` collection of the `parent`s of each of the nodes
 
-#### `find`
+##### `find`
 * Accepts a selector as an argument and returns a matching `ToastyNodeCollection`
 
-#### `remove`
+##### `remove`
 * Removes the html of all the nodes in the collection from the DOM
 
-#### `on`
+##### `on`
 * Accepts an event and a callback and adds the event handler from every element in the node array
 
-#### `off`
+##### `off`
 * Accepts an event and a callback and removes the event handler from every element in the node array
 
-#### `text`
+##### `text`
 * Accepts a string and adds it to the HTML element text content
 
-#### `get`
+##### `get`
 * Takes in an index and fetches the HTML element at that index from the node collection
