@@ -1,6 +1,6 @@
 # Toasty
 
-A light-weight library to manage core DOM manipulation functionality, AJAX requests, and event handling. Implemented using the native DOM API to ensure cross-browser compatibility.
+A light-weight library to manage core DOM manipulation and traversal functionality, AJAX requests, and event handling. Implemented using the native DOM API.
 
 ## How To Use
 
