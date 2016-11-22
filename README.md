@@ -1,8 +1,8 @@
-## Toasty
+# Toasty
 
 A light-weight library to manage core DOM manipulation functionality, making AJAX requests, and event handling. Implemented using the native DOM API to ensure cross-browser compatibility.
 
-### How To Use
+## How To Use
 
 Download `./toasty/lib/` and include it in project directory. Wherever toasty is used, include the following line at the top of the file:
 ```javascript
@@ -11,11 +11,11 @@ const $t = require('./../toasty/lib/main');
 
 ### Methods
 
-#### $t
-
+#### `$t(selector)`
+* Creates an HTML element with the selector and returns a ToastyNodeCollection object
 ```javascript
-// $t('<tag>') will create an HTML element with the tag and return a ToastyNodeCollection object
 const $li = $t('<li>');
+```
 
 // $t('tag') and $t('.class') will collect all matching nodes from the page and return a ToastyNodeCollection object
 const collection = $t('li');
@@ -26,12 +26,11 @@ const collection = $t(HTMLElement);
 
 // If argument is a function, will push function into a queue to be executed on `document` `ready`
 $t(func);
-```
 
 #### AJAX
 
 #### $t.ajax(options);
-* Uses native Javascript API to send ajax requests using and XMLHttpRequest object
+* Uses native Javascript API to send ajax requests using an XMLHttpRequest object
 * Receives an options object as an argument and includes the following:
  * `success` and `error` callback functions
  * `url`
