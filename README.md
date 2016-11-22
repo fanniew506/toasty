@@ -12,9 +12,11 @@ const $t = require('./../toasty/lib/main');
 ```
 
 To include a script source for Toasty in an html file, first ensure webpack is installed in the project:
+
 `npm install webpack --save-dev`
 
 Or, install globally:
+
 `npm install webpack -g`
 
 Next, run `webpack`
