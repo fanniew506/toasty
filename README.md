@@ -73,11 +73,16 @@ $t.ajax({
 * Acts as a setter method if a second argument of value is passed in
 
 ##### `addClass`
-* Takes a class as an argument and adds it to HTML elements in the node collection
+* Takes a class as an argument and adds it to HTML elements in the `ToastyNodeCollection`
 * Can accept multiple classes
 
 ##### `removeClass`
-* Takes a single class as an argument and removes it from the HTML elements in the node collection
+* Takes a single class as an argument and removes it from the HTML elements in the `ToastyNodeCollection`
+
+#### `toggleClass`
+* Takes a class name as a string as an argument and toggles the class for each element in the `ToastyNodeCollection`
+
+#### Traversal
 
 ##### `children`
 * Returns a `ToastyNodeCollection` of all children of all nodes in the collection
@@ -91,11 +96,6 @@ $t.ajax({
 ##### `remove`
 * Removes the html of all the nodes in the collection from the DOM
 
-##### `text`
-* Accepts a string and adds it to the HTML element text content
-
-##### `get`
-* Takes in an index and fetches the HTML element at that index from the node collection
 
 #### Event handling
 
