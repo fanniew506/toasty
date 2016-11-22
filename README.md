@@ -12,12 +12,12 @@ const $t = require('./../toasty/lib/main');
 ### Methods
 
 #### `$t(selector)`
-* Creates an HTML element with the selector and returns a ToastyNodeCollection object
+* Creates an HTML element with the selector and returns a `ToastyNodeCollection` object
 ```javascript
 const $li = $t('<li>');
 ```
 
-* `$t('tag')` and `$t('.class')` will collect all matching nodes from the page and return a ToastyNodeCollection object
+* `$t('tag')` and `$t('.class')` will collect all matching nodes from the page and return a `ToastyNodeCollection` object
 ```javascript
 const tagCollection = $t('li');
 const classCollection = $t('.class-name');
