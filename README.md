@@ -17,9 +17,9 @@ const $t = require('./../toasty/lib/main');
 // $t('<tag>') will create an HTML element with the tag and return a ToastyNodeCollection object
 const $li = $t('<li>');
 
-// $t('tag') and $t('.klass') will collect all matching nodes from the page and return a ToastyNodeCollection object
+// $t('tag') and $t('.class') will collect all matching nodes from the page and return a ToastyNodeCollection object
 const collection = $t('li');
-const collection = $t('.snake');
+const collection = $t('.class-name');
 
 // If argument is an instance of HTMLElement, function returns native HTMLElement wrapped in toasty, returning a ToastyNodeCollection
 const collection = $t(HTMLElement);
@@ -30,12 +30,8 @@ $t(func);
 
 #### AJAX
 
-// Merges two or more JavaScript objects
-$t.extend(objA, objB, objC);
-
-JavaScript using an XHR, or XMLHttpRequest object
-##### $t.ajax(options);
-* Uses native Javascript API to send ajax requests
+#### $t.ajax(options);
+* Uses native Javascript API to send ajax requests using and XMLHttpRequest object
 * Receives an options object as an argument and includes the following:
  * `success` and `error` callback functions
  * `url`
@@ -59,7 +55,7 @@ $t.ajax({
 
 #### `ToastyNodeCollection.prototype` Methods
 
-##### `html`
+#### `html`
 * `html` receives an optional string as an argument
 * With argument: the string will be the `innerHTML` of each node
 * Without argument: returns `innerHTML` of the first node
