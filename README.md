@@ -102,7 +102,7 @@ $t.ajax({
 ##### `on`
 * Accepts an event and a callback and adds the event handler to every element in the node array
 ```javascript
-$("ul").on("click", () => {...})
+$t("ul").on("click", () => {...})
 ```
 
 ##### `off`
